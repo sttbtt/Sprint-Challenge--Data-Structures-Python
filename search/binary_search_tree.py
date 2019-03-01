@@ -6,18 +6,16 @@ class BinarySearchTree:
 
   root = True
   def depth_first_for_each(self, cb):
-    if root:
-      cb(self.value)
-      root = False
+    cb(self.value)
     # traverse down left until None
     # return value
     # traverse down right until None
     # return value
     if self.left is not None:
-      cb(self.left.value)
+      # cb(self.left.value)
       self.left.depth_first_for_each(cb)
     if self.right is not None:
-      cb(self.right.value)
+      # cb(self.right.value)
       self.right.depth_first_for_each(cb)
 
   def breadth_first_for_each(self, cb):
